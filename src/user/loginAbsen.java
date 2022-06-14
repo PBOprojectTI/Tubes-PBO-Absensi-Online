@@ -310,21 +310,28 @@ public class loginAbsen extends javax.swing.JFrame {
         // TODO add your handling code here:
         conn = koneksi.getkoneksi();
         String Sql = "SELECT * FROM tb_user WHERE username=? and password=?";
-        try{
-            pet = (PreparedStatement)conn.prepareStatement(Sql);
-            pet.setString(1, username.getText());
-            pet.setString(2, password.getText());
-            rs = pet.executeQuery();
-            if(rs.next()){
-                JOptionPane.showMessageDialog(null, "anda berhasil login");
-                mainDashboard start = new mainDashboard();
-                start.setVisible(true);
-                this.dispose();
-            }else{
-                JOptionPane.showMessageDialog(null, "username atau password tidak terdaftar","Pesan", JOptionPane.ERROR_MESSAGE);
+        if(username.getText().equals("admin") && password.getText().equals("admin")){
+            JOptionPane.showMessageDialog(null, "anda berhasil login, Selamat Datang Admin");
+            adminDashboard start = new adminDashboard();
+            start.setVisible(true);
+            this.dispose();
+        }else{
+            try{
+                pet = (PreparedStatement)conn.prepareStatement(Sql);
+                pet.setString(1, username.getText());
+                pet.setString(2, password.getText());
+                rs = pet.executeQuery();
+                if(rs.next()){
+                    JOptionPane.showMessageDialog(null, "anda berhasil login");
+                    mainDashboard start = new mainDashboard();
+                    start.setVisible(true);
+                    this.dispose();
+                }else{
+                    JOptionPane.showMessageDialog(null, "username atau password tidak terdaftar","Pesan", JOptionPane.ERROR_MESSAGE);
+                }
+            }catch(Exception e){
+                JOptionPane.showMessageDialog(null, e);
             }
-        }catch(Exception e){
-            JOptionPane.showMessageDialog(null, e);
         }
     }//GEN-LAST:event_loginActionPerformed
 

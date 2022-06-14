@@ -53,6 +53,7 @@ public class dashboardAbsen extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
         jLabel12 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -62,6 +63,8 @@ public class dashboardAbsen extends javax.swing.JFrame {
         nama = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         matakuliah = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jkuliah = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -161,25 +164,39 @@ public class dashboardAbsen extends javax.swing.JFrame {
             }
         });
 
+        jLabel13.setFont(new java.awt.Font("Segoe UI Historic", 0, 14)); // NOI18N
+        jLabel13.setText("Jadwal");
+        jLabel13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel13MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jSeparator2)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(143, 143, 143)
-                        .addComponent(jLabel4))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGap(143, 143, 143)
+                                .addComponent(jLabel4))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -194,6 +211,8 @@ public class dashboardAbsen extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel13)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -231,6 +250,9 @@ public class dashboardAbsen extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jLabel7.setText("MataKuliah");
 
+        jLabel6.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel6.setText("Jenis Perkuliahan");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -245,23 +267,27 @@ public class dashboardAbsen extends javax.swing.JFrame {
                         .addGap(52, 52, 52)
                         .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 629, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(346, 346, 346)
-                        .addComponent(jButton1))
+                        .addGap(97, 97, 97)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel7)
+                                    .addComponent(jLabel6))
+                                .addGap(69, 69, 69)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(matakuliah, javax.swing.GroupLayout.DEFAULT_SIZE, 381, Short.MAX_VALUE)
+                                    .addComponent(jkuliah)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel11)
+                                    .addComponent(jLabel8))
+                                .addGap(132, 132, 132)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(tgll, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(nama, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(136, 136, 136)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(matakuliah))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel8)
-                                    .addComponent(jLabel11))
-                                .addGap(34, 34, 34)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(nama, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(tgll, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                        .addGap(356, 356, 356)
+                        .addComponent(jButton1)))
                 .addContainerGap(86, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -280,16 +306,20 @@ public class dashboardAbsen extends javax.swing.JFrame {
                     .addComponent(jLabel11)
                     .addComponent(nama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel8)
-                    .addComponent(tgll, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(tgll, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8))
                 .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(matakuliah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(23, 23, 23)
+                .addGap(31, 31, 31)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(jkuliah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(43, 43, 43)
                 .addComponent(jButton1)
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addContainerGap(57, Short.MAX_VALUE))
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -331,21 +361,78 @@ public class dashboardAbsen extends javax.swing.JFrame {
             pet.setString(1, nama.getText());
             rs = pet.executeQuery();
             if(rs.next()){
-                String sql = "insert into tb_absen values (?,?,?,?)";
-                   try{
-                        PreparedStatement stat = conn.prepareStatement(sql);
-                        stat.setString(1, null);
-                        stat.setString(2, nama.getText());
-                        stat.setString(3, date);
-                        stat.setString(4, matakuliah.getText());
-                        stat.executeUpdate();
+                String sql = "SELECT * FROM tb_matakulaih WHERE Matakuliah=?";
+                try{
+                    pet = (PreparedStatement)conn.prepareStatement(sql);
+                    pet.setString(1, matakuliah.getText());
+                    rs = pet.executeQuery();
+                    if(rs.next()){
+                        String SQl = "SELECT * FROM tb_matakulaih WHERE Jenis_perkuliahan=? AND Matakuliah=? AND Jadwal=?";
+                        try{
+                            pet = (PreparedStatement)conn.prepareStatement(SQl);
+                            pet.setString(1, jkuliah.getText());
+                            pet.setString(2, matakuliah.getText());
+                            pet.setString(3, date);
+                            rs = pet.executeQuery();
+                            if(rs.next()){
+                                  try{
+                                        String SQL = "insert into tb_absen values (?,?,?,?,?)";
+                                        PreparedStatement stat = conn.prepareStatement(SQL);
+                                        stat.setString(1, null);
+                                        stat.setString(2, nama.getText());
+                                        stat.setString(3, date);
+                                        stat.setString(4, matakuliah.getText());
+                                        stat.setString(5, jkuliah.getText());
+                                        stat.executeUpdate();
+                                        JOptionPane.showMessageDialog(null, "absen berhasil");
+                                        kosong();
+                                        nama.requestFocus();
+                                    }catch (SQLException e){
+                                        JOptionPane.showMessageDialog(null, "absen gagal coba lagi" +e);
+                                    }
+                            }else{
+                                JOptionPane.showMessageDialog(null, "matakuliah tidak terdapat di database, Ulangi Kembali","Pesan", JOptionPane.ERROR_MESSAGE);
+                            }
+                        
+                        }catch (SQLException e){
+                            JOptionPane.showMessageDialog(null, "absen gagal coba lagi" +e);
+                        }
+                   //try{
+                     //   String SQL = "insert into tb_absen values (?,?,?,?)";
+                      //  PreparedStatement stat = conn.prepareStatement(SQL);
+                       // stat.setString(1, null);
+                       // stat.setString(2, nama.getText());
+                       // stat.setString(3, date);
+                       // stat.setString(4, matakuliah.getText());
+                       // stat.executeUpdate();
             
-                        JOptionPane.showMessageDialog(null, "absen berhasil");
-                        kosong();
-                        nama.requestFocus();
-                    }catch (SQLException e){
-                        JOptionPane.showMessageDialog(null, "absen gagal coba lagi" +e);
+                      //  JOptionPane.showMessageDialog(null, "absen berhasil");
+                      //  kosong();
+                     //   nama.requestFocus();
+                   // }catch (SQLException e){
+                      //  JOptionPane.showMessageDialog(null, "absen gagal coba lagi" +e);
+                   // }
+                    }else{
+                        JOptionPane.showMessageDialog(null, "matakuliah tidak terdapat di database, Ulangi Kembali","Pesan", JOptionPane.ERROR_MESSAGE);
                     }
+                }catch (SQLException e){
+                    JOptionPane.showMessageDialog(null, "matakuliah tidak terdapat di database, Ulangi lagi" +e);
+                }
+                //String SQL = "insert into tb_absen values (?,?,?,?)";
+                  // try{
+                    //    PreparedStatement stat = conn.prepareStatement(SQL);
+                     //   stat.setString(1, null);
+                     //   stat.setString(2, nama.getText());
+                      //  stat.setString(3, date);
+                      //  stat.setString(4, matakuliah.getText());
+                       // stat.executeUpdate();
+            
+                       // JOptionPane.showMessageDialog(null, "absen berhasil");
+                       // kosong();
+                       // nama.requestFocus();
+                   // }catch (SQLException e){
+                    //    JOptionPane.showMessageDialog(null, "absen gagal coba lagi" +e);
+                    //}
             }else{
                 JOptionPane.showMessageDialog(null, "Nama tidak terdapat di database, Ulangi Kembali","Pesan", JOptionPane.ERROR_MESSAGE);
             }
@@ -381,6 +468,13 @@ public class dashboardAbsen extends javax.swing.JFrame {
         start.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel3MouseClicked
+
+    private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
+        // TODO add your handling code here:
+        jadwalMatakuliah start = new jadwalMatakuliah();
+        start.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel13MouseClicked
 
     /**
      * @param args the command line arguments
@@ -424,10 +518,12 @@ public class dashboardAbsen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -436,6 +532,7 @@ public class dashboardAbsen extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JTextField jkuliah;
     private javax.swing.JTextField matakuliah;
     private javax.swing.JLabel minimize;
     private javax.swing.JTextField nama;
